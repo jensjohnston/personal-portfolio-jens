@@ -11,206 +11,549 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-body text-white font-poppins pb-12">
-    
-    <header class="py-6">
-        <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-            <div class="text-lg font-bold">Jonathan.doe</div>
-            <div class="hidden md:flex space-x-12 items-center">
-                <a href="#" class="text-selected-text">Home</a>
-                <a href="#work">My work</a>
-                <a href="#clients">Clients</a>
-                <a href="#hire"><button class="px-6 py-2 bg-theme font-bold">Hire me</button></a>
-            </div>
-            <div class="md:hidden">
-                <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
-            </div>
-        </div>
-    </header>
-
-
-    <div class="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-        <div class="flex flex-wrap md:flex-nowrap">
-
-            <nav class="inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
-                <div class="absolute left-50 transform -translate-x-1/2 space-y-6 mt-36">
-                    <a href="#" class="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
-                    </a>
-                    <a href="#work" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Work</span>
-                    </a>
-                    <a href="#clients" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Clients</span>
-                    </a>
-                    <a href="#hire" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Hire</span>
-                    </a>
-                </div>
-            </nav>
-
-            <div class="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
-                <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">Building<br> beautiful web experiences.</h1>
-                <div class="w-full flex justify-center md:justify-start">
-                    <button class="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
-                        <div>
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.4375 11C14.4375 11.9117 14.0753 12.786 13.4307 13.4307C12.786 14.0753 11.9117 14.4375 11 14.4375C10.0883 14.4375 9.21398 14.0753 8.56932 13.4307C7.92466 12.786 7.5625 11.9117 7.5625 11C7.5625 10.0883 7.92466 9.21398 8.56932 8.56932C9.21398 7.92466 10.0883 7.5625 11 7.5625C11.9117 7.5625 12.786 7.92466 13.4307 8.56932C14.0753 9.21398 14.4375 10.0883 14.4375 11Z" fill="white"/>
-                                <path d="M0 11C0 11 4.125 3.4375 11 3.4375C17.875 3.4375 22 11 22 11C22 11 17.875 18.5625 11 18.5625C4.125 18.5625 0 11 0 11ZM11 15.8125C12.2764 15.8125 13.5004 15.3055 14.403 14.403C15.3055 13.5004 15.8125 12.2764 15.8125 11C15.8125 9.72365 15.3055 8.49957 14.403 7.59705C13.5004 6.69453 12.2764 6.1875 11 6.1875C9.72365 6.1875 8.49957 6.69453 7.59705 7.59705C6.69453 8.49957 6.1875 9.72365 6.1875 11C6.1875 12.2764 6.69453 13.5004 7.59705 14.403C8.49957 15.3055 9.72365 15.8125 11 15.8125Z" fill="white"/>
-                            </svg>								
-                        </div>
-                        <span>View my work.</span>
-                    </button>
-                </div>
-            </div>
-            <img src="img/man.png" alt="Man" class="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1">
-        </div>
+<body class="text-gray-600 dark:text-white pb-12 bg-white dark:bg-black">
+    <div class="relative flex h-full min-h-screen w-full">
+    	<nav
+    		class="absolute -translate-x-full 3xl:w-80 z-30 flex h-full max-h-screen min-h-screen w-3/4 flex-none transform flex-col overflow-y-auto border-r border-gray-150 bg-white pb-10 transition duration-200 ease-in-out dark:border-gray-800 dark:bg-gray-900 sm:w-1/2 sm:pb-0 md:w-1/3 lg:relative lg:z-auto lg:w-56 lg:translate-x-0 lg:bg-gray-50 lg:dark:bg-gray-900 2xl:w-72">
+    		<div class="filter-blur sticky top-0 z-10 flex flex-col justify-center px-3 py-2 dark:border-b dark:border-gray-900"
+    			style="background: rgba(255, 255, 255, 0); box-shadow: rgba(0, 0, 0, 0) 0px 1px 3px; min-height: 48px;">
+    			<div class="flex flex-none items-center justify-between"><span class="flex items-center space-x-3"><span
+    						class="flex cursor-pointer items-center justify-center rounded-md p-2 hover:bg-gray-200 dark:hover:bg-gray-800 lg:hidden"><svg
+    							xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+    							fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    							stroke-linejoin="round" class="text-primary">
+    							<line x1="3" y1="12" x2="21" y2="12"></line>
+    							<line x1="3" y1="6" x2="21" y2="6"></line>
+    							<line x1="3" y1="18" x2="21" y2="18"></line>
+    						</svg></span>
+    					<h2 class="text-primary transform-gpu text-sm font-bold line-clamp-1">Jens Johnston</h2>
+    				</span></div>
+    			<div></div>
+    		</div>
+    		<div class="flex-1 px-3 py-3 space-y-1">
+    			<ul class="space-y-1">
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  bg-black text-white hover:bg-black hover:text-white dark:bg-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
+    						href="/"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path
+    									d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+    								</path>
+    							</svg></span><span class="flex-1">Home</span></a></li>
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="/writing"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path fill-rule="evenodd"
+    									d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
+    									clip-rule="evenodd"></path>
+    								<path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path>
+    							</svg></span><span class="flex-1">Writing</span></a></li>
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="/crit"><span class="flex items-center justify-center w-4"><svg width="14" height="14"
+    								viewBox="0 0 14 14" stroke="currentColor" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M10.5 1.75C10.0359 1.75 9.59075 1.93437 9.26256 2.26256C8.93437 2.59075 8.75 3.03587 8.75 3.5V10.5C8.75 10.9641 8.93437 11.4092 9.26256 11.7374C9.59075 12.0656 10.0359 12.25 10.5 12.25C10.9641 12.25 11.4092 12.0656 11.7374 11.7374C12.0656 11.4092 12.25 10.9641 12.25 10.5C12.25 10.0359 12.0656 9.59075 11.7374 9.26256C11.4092 8.93437 10.9641 8.75 10.5 8.75H3.5C3.03587 8.75 2.59075 8.93437 2.26256 9.26256C1.93437 9.59075 1.75 10.0359 1.75 10.5C1.75 10.9641 1.93437 11.4092 2.26256 11.7374C2.59075 12.0656 3.03587 12.25 3.5 12.25C3.96413 12.25 4.40925 12.0656 4.73744 11.7374C5.06563 11.4092 5.25 10.9641 5.25 10.5V3.5C5.25 3.03587 5.06563 2.59075 4.73744 2.26256C4.40925 1.93437 3.96413 1.75 3.5 1.75C3.03587 1.75 2.59075 1.93437 2.26256 2.26256C1.93437 2.59075 1.75 3.03587 1.75 3.5C1.75 3.96413 1.93437 4.40925 2.26256 4.73744C2.59075 5.06563 3.03587 5.25 3.5 5.25H10.5C10.9641 5.25 11.4092 5.06563 11.7374 4.73744C12.0656 4.40925 12.25 3.96413 12.25 3.5C12.25 3.03587 12.0656 2.59075 11.7374 2.26256C11.4092 1.93437 10.9641 1.75 10.5 1.75Z"
+    									stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+    							</svg></span><span class="flex-1">Crit</span></a></li>
+    			</ul>
+    			<ul class="space-y-1">
+    				<h4 class="px-2 pt-5 pb-2 text-xs font-semibold text-gray-1000 text-opacity-40 dark:text-white">Me
+    				</h4>
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="/bookmarks"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
+    							</svg></span><span class="flex-1">Bookmarks</span></a></li>
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="/ama"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z">
+    								</path>
+    								<path
+    									d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z">
+    								</path>
+    							</svg></span><span class="flex-1">AMA</span></a></li>
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="/stack"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path
+    									d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z">
+    								</path>
+    							</svg></span><span class="flex-1">Stack</span></a></li>
+    			</ul>
+    			<ul class="space-y-1">
+    				<h4 class="px-2 pt-5 pb-2 text-xs font-semibold text-gray-1000 text-opacity-40 dark:text-white">
+    					Work</h4>
+    				<li class="flex items-stretch space-x-1"><a target="_blank" rel="noopener noreferrer"
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="https://designdetails.fm"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path fill-rule="evenodd"
+    									d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+    									clip-rule="evenodd"></path>
+    							</svg></span><span class="flex-1">Design Details</span><span
+    							class="flex items-center justify-center w-4 text-black text-opacity-40 dark:text-white"><svg
+    								width="10" height="9" viewBox="0 0 10 9" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M9.00195 6.32617V0.824219C9.00195 0.490234 8.79102 0.267578 8.45117 0.267578L2.94922 0.279297C2.62109 0.279297 2.41016 0.519531 2.41016 0.794922C2.41016 1.07031 2.65039 1.30469 2.92578 1.30469H4.66602L7.45508 1.19922L6.39453 2.13672L1.16211 7.38086C1.05664 7.48633 0.998047 7.61523 0.998047 7.73828C0.998047 8.01367 1.24414 8.27734 1.53125 8.27734C1.66602 8.27734 1.78906 8.22461 1.89453 8.11914L7.13281 2.875L8.07617 1.81445L7.96484 4.48047V6.34961C7.96484 6.61914 8.19922 6.86523 8.48633 6.86523C8.76172 6.86523 9.00195 6.63672 9.00195 6.32617Z"
+    									fill="currentColor"></path>
+    							</svg></span></a></li>
+    				<li class="flex items-stretch space-x-1"><a target="_blank" rel="noopener noreferrer"
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="https://staff.design"><span class="flex items-center justify-center w-4"><svg
+    								width="16" height="16" viewBox="0 0 19 20" xmlns="http://www.w3.org/2000/svg"
+    								fill="currentColor">
+    								<path fill-rule="evenodd" clip-rule="evenodd"
+    									d="M16.5624 7.65024C15.3911 4.22834 13.9853 0.299954 10.3749 0.0277404C6.02993 -0.299865 1.80395 2.3005 0.442366 6.43482C-0.933043 10.6111 1.02411 15.0339 4.57906 17.6263C8.16191 20.239 13.1943 21.056 16.602 18.2191C19.4143 15.8778 18.023 11.8653 16.7983 8.33341C16.7186 8.10345 16.6396 7.87553 16.5624 7.65024ZM12.9543 11.6429C12.9543 13.4747 11.5233 14.6404 9.06857 14.6404C7.06405 14.6404 5.90451 13.9188 5.52211 13.0491C5.42959 12.8456 5.38642 12.6359 5.38642 12.4324C5.38642 11.8032 5.86133 11.3715 6.50895 11.3715C7.00237 11.3715 7.33543 11.5257 7.68699 12.0191C7.99538 12.457 8.51347 12.6359 9.09941 12.6359C9.88271 12.6359 10.3638 12.3152 10.3638 11.8773C10.3638 11.4578 10.0184 11.279 9.01923 11.1001L8.1249 10.9398C6.35475 10.6252 5.38642 9.73087 5.38642 8.34929C5.38642 6.56064 6.92836 5.43194 9.0439 5.43194C10.8079 5.43194 12.0723 6.05488 12.5349 7.16508C12.6089 7.34395 12.6459 7.51048 12.6459 7.71401C12.6459 8.30612 12.2141 8.70702 11.5603 8.71319C11.0052 8.71319 10.6537 8.52199 10.3391 8.04707C10.0492 7.60299 9.636 7.43646 9.07474 7.43646C8.34694 7.43646 7.97688 7.75719 7.97688 8.15809C7.97688 8.55899 8.35928 8.7502 9.24743 8.91056L10.1418 9.07092C12.0538 9.41631 12.9543 10.1996 12.9543 11.6429Z">
+    								</path>
+    							</svg></span><span class="flex-1">Staff Design</span><span
+    							class="flex items-center justify-center w-4 text-black text-opacity-40 dark:text-white"><svg
+    								width="10" height="9" viewBox="0 0 10 9" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M9.00195 6.32617V0.824219C9.00195 0.490234 8.79102 0.267578 8.45117 0.267578L2.94922 0.279297C2.62109 0.279297 2.41016 0.519531 2.41016 0.794922C2.41016 1.07031 2.65039 1.30469 2.92578 1.30469H4.66602L7.45508 1.19922L6.39453 2.13672L1.16211 7.38086C1.05664 7.48633 0.998047 7.61523 0.998047 7.73828C0.998047 8.01367 1.24414 8.27734 1.53125 8.27734C1.66602 8.27734 1.78906 8.22461 1.89453 8.11914L7.13281 2.875L8.07617 1.81445L7.96484 4.48047V6.34961C7.96484 6.61914 8.19922 6.86523 8.48633 6.86523C8.76172 6.86523 9.00195 6.63672 9.00195 6.32617Z"
+    									fill="currentColor"></path>
+    							</svg></span></a></li>
+    				<li class="flex items-stretch space-x-1"><a target="_blank" rel="noopener noreferrer"
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="https://figma.com/@brian"><span class="flex items-center justify-center w-4"><svg
+    								width="14" height="15" viewBox="0 0 14 14" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M4.63338 14.8C5.25222 14.8 5.84571 14.5541 6.2833 14.1166C6.72088 13.679 6.96672 13.0855 6.96672 12.4666V10.1333H4.63338C4.01454 10.1333 3.42105 10.3791 2.98347 10.8167C2.54588 11.2543 2.30005 11.8478 2.30005 12.4666C2.30005 13.0855 2.54588 13.679 2.98347 14.1166C3.42105 14.5541 4.01454 14.8 4.63338 14.8V14.8Z"
+    									fill="currentColor"></path>
+    								<path
+    									d="M2.30005 7.39998C2.30005 6.78115 2.54588 6.18765 2.98347 5.75007C3.42105 5.31248 4.01454 5.06665 4.63338 5.06665H6.96672V9.73332H4.63338C4.01454 9.73332 3.42105 9.48748 2.98347 9.0499C2.54588 8.61231 2.30005 8.01882 2.30005 7.39998V7.39998Z"
+    									fill="currentColor"></path>
+    								<path
+    									d="M2.30005 2.33333C2.30005 1.71481 2.54563 1.12159 2.98282 0.684062C3.42001 0.246529 4.01304 0.000483221 4.63156 0L6.96489 0V4.66667H4.63338C4.01454 4.66667 3.42105 4.42083 2.98347 3.98325C2.54588 3.54566 2.30005 2.95217 2.30005 2.33333V2.33333Z"
+    									fill="currentColor"></path>
+    								<path
+    									d="M7.3999 0H9.73323C10.3521 0 10.9456 0.245833 11.3832 0.683417C11.8207 1.121 12.0666 1.71449 12.0666 2.33333C12.0666 2.95217 11.8207 3.54566 11.3832 3.98325C10.9456 4.42083 10.3521 4.66667 9.73323 4.66667H7.3999V0Z"
+    									fill="currentColor"></path>
+    								<path
+    									d="M11.9667 7.4034C11.9667 8.02224 11.7209 8.61573 11.2833 9.05332C10.8457 9.4909 10.2522 9.73673 9.63338 9.73673C9.01454 9.73673 8.42105 9.4909 7.98347 9.05332C7.54588 8.61573 7.30005 8.02224 7.30005 7.4034C7.30005 6.78456 7.54588 6.19107 7.98347 5.75349C8.42105 5.3159 9.01454 5.07007 9.63338 5.07007C10.2522 5.07007 10.8457 5.3159 11.2833 5.75349C11.7209 6.19107 11.9667 6.78456 11.9667 7.4034V7.4034Z"
+    									fill="currentColor"></path>
+    							</svg></span><span class="flex-1">Figma Plugins</span><span
+    							class="flex items-center justify-center w-4 text-black text-opacity-40 dark:text-white"><svg
+    								width="10" height="9" viewBox="0 0 10 9" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M9.00195 6.32617V0.824219C9.00195 0.490234 8.79102 0.267578 8.45117 0.267578L2.94922 0.279297C2.62109 0.279297 2.41016 0.519531 2.41016 0.794922C2.41016 1.07031 2.65039 1.30469 2.92578 1.30469H4.66602L7.45508 1.19922L6.39453 2.13672L1.16211 7.38086C1.05664 7.48633 0.998047 7.61523 0.998047 7.73828C0.998047 8.01367 1.24414 8.27734 1.53125 8.27734C1.66602 8.27734 1.78906 8.22461 1.89453 8.11914L7.13281 2.875L8.07617 1.81445L7.96484 4.48047V6.34961C7.96484 6.61914 8.19922 6.86523 8.48633 6.86523C8.76172 6.86523 9.00195 6.63672 9.00195 6.32617Z"
+    									fill="currentColor"></path>
+    							</svg></span></a></li>
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="/security"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path fill-rule="evenodd"
+    									d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+    									clip-rule="evenodd"></path>
+    							</svg></span><span class="flex-1">Security Checklist</span></a></li>
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="/hn"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path fill-rule="evenodd"
+    									d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+    									clip-rule="evenodd"></path>
+    							</svg></span><span class="flex-1">Hacker News</span></a></li>
+    				<li class="flex items-stretch space-x-1"><a
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="/app-dissection"><span class="flex items-center justify-center w-4"><svg
+    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
+    								fill="currentColor">
+    								<path fill-rule="evenodd"
+    									d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+    									clip-rule="evenodd"></path>
+    							</svg></span><span class="flex-1">App Dissection</span></a></li>
+    			</ul>
+    			<ul class="space-y-1">
+    				<h4 class="px-2 pt-5 pb-2 text-xs font-semibold text-gray-1000 text-opacity-40 dark:text-white">
+    					Online</h4>
+    				<li class="flex items-stretch space-x-1"><a target="_blank" rel="noopener noreferrer"
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="https://twitter.com/brian_lovin"><span
+    							class="flex items-center justify-center w-4"><svg viewBox="0 0 16 14"
+    								xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor">
+    								<path
+    									d="M14.3617 3.35401C14.3687 3.49999 14.3713 3.64777 14.3713 3.79376C14.3713 8.29039 11.0696 13.4737 5.03217 13.4737C3.17739 13.4737 1.45304 12.9105 0 11.9445C0.859457 12.0522 1.73097 11.9833 2.56473 11.7418C3.39849 11.5003 4.17814 11.0908 4.85913 10.5369C4.17428 10.5235 3.51059 10.2886 2.96085 9.86516C2.41112 9.44169 2.00282 8.85078 1.79304 8.17505C2.28527 8.27044 2.79186 8.25042 3.27565 8.11647C2.53271 7.96035 1.8647 7.54285 1.38482 6.9347C0.904951 6.32655 0.642734 5.56518 0.642609 4.77959V4.73724C1.09843 5.00001 1.60823 5.14614 2.12957 5.16347C1.4338 4.6828 0.941284 3.94507 0.752536 3.10088C0.563788 2.25669 0.693041 1.36968 1.11391 0.620882C1.93808 1.67201 2.96639 2.53173 4.13207 3.14418C5.29774 3.75663 6.5747 4.10813 7.88 4.17584C7.82353 3.92137 7.79523 3.66107 7.79565 3.39996C7.79565 2.9534 7.88054 2.51121 8.04548 2.09865C8.21041 1.68609 8.45215 1.31124 8.7569 0.995511C9.06165 0.679784 9.42344 0.429363 9.82159 0.258552C10.2197 0.0877414 10.6465 -0.00011384 11.0774 4.51813e-06C11.5265 -0.000754465 11.9709 0.0941183 12.3832 0.278738C12.7954 0.463357 13.1667 0.733786 13.4739 1.07325C14.2088 0.922489 14.9136 0.643368 15.5583 0.247815C15.3131 1.03559 14.8001 1.70424 14.1148 2.12937C14.7654 2.04944 15.4009 1.86901 16 1.5941C15.5599 2.27755 15.005 2.87363 14.3617 3.35401V3.35401Z">
+    								</path>
+    							</svg></span><span class="flex-1">Twitter</span><span
+    							class="flex items-center justify-center w-4 text-black text-opacity-40 dark:text-white"><svg
+    								width="10" height="9" viewBox="0 0 10 9" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M9.00195 6.32617V0.824219C9.00195 0.490234 8.79102 0.267578 8.45117 0.267578L2.94922 0.279297C2.62109 0.279297 2.41016 0.519531 2.41016 0.794922C2.41016 1.07031 2.65039 1.30469 2.92578 1.30469H4.66602L7.45508 1.19922L6.39453 2.13672L1.16211 7.38086C1.05664 7.48633 0.998047 7.61523 0.998047 7.73828C0.998047 8.01367 1.24414 8.27734 1.53125 8.27734C1.66602 8.27734 1.78906 8.22461 1.89453 8.11914L7.13281 2.875L8.07617 1.81445L7.96484 4.48047V6.34961C7.96484 6.61914 8.19922 6.86523 8.48633 6.86523C8.76172 6.86523 9.00195 6.63672 9.00195 6.32617Z"
+    									fill="currentColor"></path>
+    							</svg></span></a></li>
+    				<li class="flex items-stretch space-x-1"><a target="_blank" rel="noopener noreferrer"
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="https://www.youtube.com/channel/UC-esBYEUGQ6iK1wmw76f5MA"><span
+    							class="flex items-center justify-center w-4"><svg width="16" height="16"
+    								viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M0.734576 5.16761C0.805268 4.07928 1.68027 3.22636 2.76955 3.1724C4.34691 3.09425 6.60141 3 8.3001 3C9.99879 3 12.2533 3.09425 13.8306 3.1724C14.9199 3.22636 15.7949 4.07928 15.8656 5.16761C15.9333 6.21031 16.0001 7.49331 16.0001 8.5C16.0001 9.50669 15.9333 10.7897 15.8656 11.8324C15.7949 12.9207 14.9199 13.7736 13.8306 13.8276C12.2533 13.9058 9.99879 14 8.3001 14C6.60141 14 4.34691 13.9058 2.76955 13.8276C1.68027 13.7736 0.805268 12.9207 0.734576 11.8324C0.666848 10.7897 0.600098 9.50669 0.600098 8.5C0.600098 7.49331 0.666848 6.21031 0.734576 5.16761Z"
+    									fill="currentColor"></path>
+    								<path d="M6.6499 6.30005V10.7L11.0499 8.50005L6.6499 6.30005Z" fill="currentColor"
+    									class="text-gray-50 dark:text-gray-900"></path>
+    							</svg></span><span class="flex-1">YouTube</span><span
+    							class="flex items-center justify-center w-4 text-black text-opacity-40 dark:text-white"><svg
+    								width="10" height="9" viewBox="0 0 10 9" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M9.00195 6.32617V0.824219C9.00195 0.490234 8.79102 0.267578 8.45117 0.267578L2.94922 0.279297C2.62109 0.279297 2.41016 0.519531 2.41016 0.794922C2.41016 1.07031 2.65039 1.30469 2.92578 1.30469H4.66602L7.45508 1.19922L6.39453 2.13672L1.16211 7.38086C1.05664 7.48633 0.998047 7.61523 0.998047 7.73828C0.998047 8.01367 1.24414 8.27734 1.53125 8.27734C1.66602 8.27734 1.78906 8.22461 1.89453 8.11914L7.13281 2.875L8.07617 1.81445L7.96484 4.48047V6.34961C7.96484 6.61914 8.19922 6.86523 8.48633 6.86523C8.76172 6.86523 9.00195 6.63672 9.00195 6.32617Z"
+    									fill="currentColor"></path>
+    							</svg></span></a></li>
+    				<li class="flex items-stretch space-x-1"><a target="_blank" rel="noopener noreferrer"
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="https://github.com/brianlovin"><span class="flex items-center justify-center w-4"><svg
+    								viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+    								fill="currentColor">
+    								<path fill-rule="evenodd" clip-rule="evenodd"
+    									d="M8.06478 0C3.61133 0 0 3.6722 0 8.20248C0 11.8266 2.31081 14.9013 5.51518 15.9859C5.91823 16.0618 6.06622 15.808 6.06622 15.5913C6.06622 15.3957 6.05875 14.7496 6.05528 14.0642C3.81164 14.5604 3.3382 13.0963 3.3382 13.0963C2.97134 12.1483 2.44275 11.8961 2.44275 11.8961C1.71103 11.387 2.49791 11.3975 2.49791 11.3975C3.30775 11.4552 3.73417 12.2428 3.73417 12.2428C4.45347 13.4968 5.62083 13.1343 6.08103 12.9247C6.15342 12.3947 6.36245 12.0325 6.59305 11.8278C4.80178 11.6204 2.91872 10.9171 2.91872 7.77405C2.91872 6.87851 3.23377 6.14679 3.74966 5.57235C3.66593 5.36561 3.38987 4.53148 3.8278 3.40163C3.8278 3.40163 4.50501 3.18118 6.04619 4.24243C6.68951 4.0607 7.37942 3.96953 8.06478 3.96644C8.75018 3.96953 9.44062 4.0607 10.0851 4.24243C11.6244 3.18118 12.3007 3.40163 12.3007 3.40163C12.7397 4.53148 12.4635 5.36561 12.3798 5.57235C12.8969 6.14679 13.2098 6.87851 13.2098 7.77405C13.2098 10.9245 11.3231 11.6182 9.52728 11.8213C9.81657 12.0758 10.0743 12.575 10.0743 13.3403C10.0743 14.4377 10.065 15.321 10.065 15.5913C10.065 15.8096 10.2101 16.0653 10.6189 15.9848C13.8216 14.899 16.1294 11.8254 16.1294 8.20248C16.1294 3.6722 12.5187 0 8.06478 0Z">
+    								</path>
+    							</svg></span><span class="flex-1">GitHub</span><span
+    							class="flex items-center justify-center w-4 text-black text-opacity-40 dark:text-white"><svg
+    								width="10" height="9" viewBox="0 0 10 9" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M9.00195 6.32617V0.824219C9.00195 0.490234 8.79102 0.267578 8.45117 0.267578L2.94922 0.279297C2.62109 0.279297 2.41016 0.519531 2.41016 0.794922C2.41016 1.07031 2.65039 1.30469 2.92578 1.30469H4.66602L7.45508 1.19922L6.39453 2.13672L1.16211 7.38086C1.05664 7.48633 0.998047 7.61523 0.998047 7.73828C0.998047 8.01367 1.24414 8.27734 1.53125 8.27734C1.66602 8.27734 1.78906 8.22461 1.89453 8.11914L7.13281 2.875L8.07617 1.81445L7.96484 4.48047V6.34961C7.96484 6.61914 8.19922 6.86523 8.48633 6.86523C8.76172 6.86523 9.00195 6.63672 9.00195 6.32617Z"
+    									fill="currentColor"></path>
+    							</svg></span></a></li>
+    				<li class="flex items-stretch space-x-1"><a target="_blank" rel="noopener noreferrer"
+    						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
+    						href="https://figma.com/@brian"><span class="flex items-center justify-center w-4"><svg
+    								width="14" height="15" viewBox="0 0 14 14" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M4.63338 14.8C5.25222 14.8 5.84571 14.5541 6.2833 14.1166C6.72088 13.679 6.96672 13.0855 6.96672 12.4666V10.1333H4.63338C4.01454 10.1333 3.42105 10.3791 2.98347 10.8167C2.54588 11.2543 2.30005 11.8478 2.30005 12.4666C2.30005 13.0855 2.54588 13.679 2.98347 14.1166C3.42105 14.5541 4.01454 14.8 4.63338 14.8V14.8Z"
+    									fill="currentColor"></path>
+    								<path
+    									d="M2.30005 7.39998C2.30005 6.78115 2.54588 6.18765 2.98347 5.75007C3.42105 5.31248 4.01454 5.06665 4.63338 5.06665H6.96672V9.73332H4.63338C4.01454 9.73332 3.42105 9.48748 2.98347 9.0499C2.54588 8.61231 2.30005 8.01882 2.30005 7.39998V7.39998Z"
+    									fill="currentColor"></path>
+    								<path
+    									d="M2.30005 2.33333C2.30005 1.71481 2.54563 1.12159 2.98282 0.684062C3.42001 0.246529 4.01304 0.000483221 4.63156 0L6.96489 0V4.66667H4.63338C4.01454 4.66667 3.42105 4.42083 2.98347 3.98325C2.54588 3.54566 2.30005 2.95217 2.30005 2.33333V2.33333Z"
+    									fill="currentColor"></path>
+    								<path
+    									d="M7.3999 0H9.73323C10.3521 0 10.9456 0.245833 11.3832 0.683417C11.8207 1.121 12.0666 1.71449 12.0666 2.33333C12.0666 2.95217 11.8207 3.54566 11.3832 3.98325C10.9456 4.42083 10.3521 4.66667 9.73323 4.66667H7.3999V0Z"
+    									fill="currentColor"></path>
+    								<path
+    									d="M11.9667 7.4034C11.9667 8.02224 11.7209 8.61573 11.2833 9.05332C10.8457 9.4909 10.2522 9.73673 9.63338 9.73673C9.01454 9.73673 8.42105 9.4909 7.98347 9.05332C7.54588 8.61573 7.30005 8.02224 7.30005 7.4034C7.30005 6.78456 7.54588 6.19107 7.98347 5.75349C8.42105 5.3159 9.01454 5.07007 9.63338 5.07007C10.2522 5.07007 10.8457 5.3159 11.2833 5.75349C11.7209 6.19107 11.9667 6.78456 11.9667 7.4034V7.4034Z"
+    									fill="currentColor"></path>
+    							</svg></span><span class="flex-1">Figma</span><span
+    							class="flex items-center justify-center w-4 text-black text-opacity-40 dark:text-white"><svg
+    								width="10" height="9" viewBox="0 0 10 9" fill="none"
+    								xmlns="http://www.w3.org/2000/svg">
+    								<path
+    									d="M9.00195 6.32617V0.824219C9.00195 0.490234 8.79102 0.267578 8.45117 0.267578L2.94922 0.279297C2.62109 0.279297 2.41016 0.519531 2.41016 0.794922C2.41016 1.07031 2.65039 1.30469 2.92578 1.30469H4.66602L7.45508 1.19922L6.39453 2.13672L1.16211 7.38086C1.05664 7.48633 0.998047 7.61523 0.998047 7.73828C0.998047 8.01367 1.24414 8.27734 1.53125 8.27734C1.66602 8.27734 1.78906 8.22461 1.89453 8.11914L7.13281 2.875L8.07617 1.81445L7.96484 4.48047V6.34961C7.96484 6.61914 8.19922 6.86523 8.48633 6.86523C8.76172 6.86523 9.00195 6.63672 9.00195 6.32617Z"
+    									fill="currentColor"></path>
+    							</svg></span></a></li>
+    			</ul>
+    		</div>
+    	</nav>
+    	<div
+    		class="fixed inset-0 z-20 bg-black bg-opacity-10 transition duration-200 ease-in-out dark:bg-opacity-50 pointer-events-none opacity-0">
+    	</div>
+    	<div class="flex flex-1">
+    		<div class="flex w-full">
+    			<div id="main" class="relative flex max-h-screen w-full flex-col overflow-y-auto bg-white dark:bg-black"
+    				data-cy="home-intro">
+    				<div class="filter-blur sticky top-0 z-10 flex flex-col justify-center px-3 py-2 dark:border-b dark:border-gray-900"
+    					style="background: rgba(255, 255, 255, 0); box-shadow: rgba(0, 0, 0, 0) 0px 1px 3px; min-height: 48px;">
+    					<div class="flex flex-none items-center justify-between"><span
+    							class="flex items-center space-x-3"><span
+    								class="flex cursor-pointer items-center justify-center rounded-md p-2 hover:bg-gray-200 dark:hover:bg-gray-800 lg:hidden"><svg
+    									xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+    									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    									stroke-linejoin="round" class="text-primary">
+    									<line x1="3" y1="12" x2="21" y2="12"></line>
+    									<line x1="3" y1="6" x2="21" y2="6"></line>
+    									<line x1="3" y1="18" x2="21" y2="18"></line>
+    								</svg></span>
+    							<h2 class="text-primary transform-gpu text-sm font-bold line-clamp-1"
+    								style="transform: translateY(200%); opacity: 0;">Home</h2>
+    						</span></div>
+    					<div></div>
+    				</div>
+    				<div class="p-4"></div>
+    				<div class="mx-auto w-full max-w-3xl px-4 py-12 pb-10 md:px-8">
+						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
+								<div class="md:col-start-3 md:col-end-13 py-10 px-6 border border-gray-200 text-center rounded-2xl xl:px-10 xl:text-left mb-10"><a href="/" class="flex items-center no-underline">
+									<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGQSsMmnQSp3Q/profile-displayphoto-shrink_400_400/0/1650279402881?e=1655942400&v=beta&t=8FaYnk3ul_5RzgE_Ur8R4yDnuXwEok2i5HoK4LGmI58" alt="" class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"></a>
+									<div class="space-y-2 xl:flex xl:items-center xl:justify-between mt-10">
+										<div class="font-medium text-lg leading-6 space-y-1">
+											<h3 class="">Jens Johnston</h3>
+											<p class="">Product Owner</p>
+										</div>
+	
+										<ul role="list" class="flex justify-center space-x-5">
+											<li>
+												<a href="#" class="text-gray-400 hover:text-gray-300">
+													<span class="sr-only">Twitter</span>
+													<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+														<path
+															d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">
+														</path>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="text-gray-400 hover:text-gray-300">
+													<span class="sr-only">LinkedIn</span>
+													<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+														<path fill-rule="evenodd"
+															d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+															clip-rule="evenodd"></path>
+													</svg>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								
+						</div>
+    					<div class="pb-24 space-y-8 md:space-y-16">
+    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
+    							<h4
+    								class="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40">
+    							</h4>
+    							<div class="col-span-10">
+    								<div class="prose text-primary">
+    									<p class="pb-4">Hey, I'm Jens. I'm a designer, I work with integrating the domain knowledge, user experience, business goals and strategy of the E-commerce. I’m responsible and working in the development team together with the sales and marketing to get the product aligned with return on investment and own the product backlog and prioritize and orders stories to create the most value.</p>
+    									<p class="pb-4">Before GitHub, I co-founded <a target="_blank" rel="noopener noreferrer"
+    											href="https://spectrum.chat">Spectrum</a>, a platform for large-scale
+    										communities to have better public conversations. Spectrum was acquired by
+    										GitHub in November, 2018.</p>
+    									<p class="pb-4">Before Spectrum I designed payments experiences at Facebook, working across
+    										Facebook, Messenger, WhatsApp, and Instagram. I originally cut my teeth as
+    										the first product designer at <a target="_blank" rel="noopener noreferrer"
+    											href="https://buffer.com">Buffer</a>.</p>
+    									<p class="pb-4">I also co-host the <a target="_blank" rel="noopener noreferrer"
+    											href="https://designdetails.fm">Design Details Podcast</a>, a weekly
+    										conversation about design process and culture. Design Details is part of <a
+    											target="_blank" rel="noopener noreferrer"
+    											href="https://spec.fm">Spec.fm</a>, a podcast network for designers and
+    										developers, which I co-founded in 2015.</p>
+    								</div>
+    								<div class="flex pt-6"><a href="https://changelog.brianlovin.com"
+    										class="flex space-x-2 flex-none items-center justify-center cursor-pointer leading-none transition-all font-semibold px-4 py-2 text-sm opacity-100 rounded-md text-gray-700 hover:text-gray-1000 shadow-xs bg-white border border-gray-400 border-opacity-30 dark:border-gray-700 dark:hover:border-gray-600 dark:bg-white dark:bg-opacity-10 dark:text-gray-200 dark:hover:text-white hover:border-opacity-50 hover:shadow-sm">View
+    										changelog</a></div>
+    							</div>
+    						</div>
+    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
+    							<h4
+    								class="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40">
+    								Online</h4>
+    							<div class="col-span-10">
+    								<div class="flex flex-col space-y-3">
+    										<a target="_blank"
+    										rel="noopener noreferrer" href="https://www.linkedin.com/in/jens-johnston-27777b111/"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">LinkedIn</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none text-tertiary">Contact</span></a><a target="_blank"
+    										rel="noopener noreferrer" href="/github"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">GitHub</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none text-tertiary">Follow</span></a><a target="_blank"
+    										rel="noopener noreferrer" href="/figma"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Figma</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none text-tertiary">Follow</span></a></div>
+    							</div>
+    						</div>
+    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
+    							<h4
+    								class="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40">
+    								Where</h4>
+    							<div class="col-span-10"><span
+    									style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+    										style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 50% 0px 0px;"></span><img
+    										alt="Map of Stockholm with blue location dot in the middle"
+    										sizes="100vw"
+    										srcset="https://i.ibb.co/Qn7BxGv/map-of-stockholm-with-blue-dot.jpg"
+    										src="https://i.ibb.co/Qn7BxGv/map-of-stockholm-with-blue-dot.jpg"
+    										decoding="async" data-nimg="responsive" class="rounded-2xl"
+    										style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"><noscript></noscript></span>
+    								<p
+    									class="flex items-center justify-end pt-2 space-x-2 text-sm text-quaternary md:text-right">
+    									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+    										viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    										stroke-linecap="round" stroke-linejoin="round">
+    										<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    										<circle cx="12" cy="10" r="3"></circle>
+    									</svg><span>Stockholm, Sweden</span></p>
+    							</div>
+    						</div>
+    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
+    							<h4
+    								class="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40">
+    								Work</h4>
+    							<div class="col-span-10">
+    								<div class="flex flex-col space-y-3"><a target="_blank" rel="noopener noreferrer"
+    										href="https://github.com/mobile"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Airinum</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none text-tertiary">Product Owner</span><span
+    											class="flex-none font-mono text-quaternary">2018—&nbsp;&nbsp;</span></a><a
+    										target="_blank" rel="noopener noreferrer" href="https://designdetails.fm"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Design
+    											Details Podcast</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none text-tertiary">Co-host</span><span
+    											class="flex-none font-mono text-quaternary">2014—&nbsp;&nbsp;</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://github.com/withspectrum/spectrum"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Spectrum.chat</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none text-tertiary">Co-founder</span><span
+    											class="flex-none font-mono text-quaternary">2017—18</span></a><a
+    										target="_blank" rel="noopener noreferrer" href="https://facebook.com"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Facebook</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none text-tertiary">Product Designer</span><span
+    											class="flex-none font-mono text-quaternary">2015—17</span></a><a
+    										target="_blank" rel="noopener noreferrer" href="https://buffer.com"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Buffer</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none text-tertiary">Product Designer</span><span
+    											class="flex-none font-mono text-quaternary">2013—15</span></a></div>
+    							</div>
+    						</div>
+    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
+    							<h4
+    								class="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40">
+    								Speaking</h4>
+    							<div class="col-span-10">
+    								<div class="flex flex-col space-y-3"><a target="_blank" rel="noopener noreferrer"
+    										href="https://artofproductpodcast.com/episode-202"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">The
+    											Art of Product</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Mar '22</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://museapp.com/podcast/51-personal-brand/"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Metamuse:
+    											Personal Brand</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Mar '22</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://maze.co/podcast/#brian-lovin"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">The
+    											Optimal Path Podcast</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Jan '22</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://uibreakfast.com/228-design-advisory-with-brian-lovin/"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">UI
+    											Breakfast</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Dec '21</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://designmba.show/episodes/brian-lovin"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Design
+    											MBA</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Nov '21</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://progressionapp.com/blog/podcast-26-brian-lovin-github-spectrum-design-details-on-the-rise-of-the-senior-ic/"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Progression
+    											Podcast</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Jun '21</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://layout.fm/episodes/194/"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Layout.fm</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Jan '21</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://softwareengineeringdaily.com/'20/07/15/github-mobile-with-brian-lovin-and-ryan-nystrom/"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Software
+    											Engineering Daily</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Jul '20</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://avocode.com/blog/brian-lovin-product-designer-github-interview"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">The
+    											Grit</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Jul '20</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://www.swiftbysundell.com/podcast/67/"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Swift
+    											by Sundell</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Feb '20</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://www.youtube.com/watch?v=SyS3h3kmBnY"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Figma
+    											Config</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Feb '20</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://www.loversmagazine.com/interviews/brian-lovin"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Lovers
+    											Magazine</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Jan '18</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://www.youtube.com/watch?v=6MBBTdu8v6E"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">GraphQL
+    											Summit</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Nov '17</span></a><a
+    										target="_blank" rel="noopener noreferrer"
+    										href="https://designdetails.fm/episodes/3e342ac0"
+    										class="flex items-center space-x-4 group"><strong
+    											class="flex-none font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">Design
+    											Details</strong><span
+    											class="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span><span
+    											class="flex-none font-mono text-quaternary">Aug '17</span></a></div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </div>
-
-		<!-- My work -->
-		<div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-			<section class="w-full">
-				<h2 id="work" class="secondary-title">My work</h2>
-				<p class="section-paragraph">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-					<img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1547119957-637f8679db1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1336&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1603969072881-b0fc7f3d77d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80s" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1545235617-7a424c1a60cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80" class="w-full hidden md:block md:col-span-2 lg:col-span-1 bg-nav h-36 lg:h-72 object-cover">
-				</div>
-			</section>
-		</div>
-
-
-
-
-		<!-- Clients -->
-		<div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-			<section class="w-full">
-				<h2 id="clients" class="secondary-title">Clients</h2>
-				<p class="section-paragraph">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-
-				<!-- Clients -->
-				<div class="space-y-12 my-16">
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-						
-						<!-- Client logo -->
-						<div class="mb-6 lg:mb-0">
-							<svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white"/></svg>
-						</div>
-
-						<!-- Client info -->
-						<div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-							<h3 class="text-white text-3xl font-semibold">Apple, inc.</h3>
-
-							<div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-								<div class="badge">UI/UX</div>
-								<div class="badge">Frontend development</div>
-							</div>
-
-							<p class="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-						</div>
-
-					</div>
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-						
-						<!-- Client logo -->
-						<div class="mb-6 lg:mb-0">
-							<svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white"/></svg>
-						</div>
-
-						<!-- Client info -->
-						<div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-							<h3 class="text-white text-3xl font-semibold">Apple, inc.</h3>
-
-							<div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-								<div class="badge">UI/UX</div>
-								<div class="badge">Frontend development</div>
-							</div>
-
-							<p class="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-						</div>
-
-					</div>
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-						
-						<!-- Client logo -->
-						<div class="mb-6 lg:mb-0">
-							<svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white"/></svg>
-						</div>
-
-						<!-- Client info -->
-						<div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-							<h3 class="text-white text-3xl font-semibold">Apple, inc.</h3>
-
-							<div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-								<div class="badge">UI/UX</div>
-								<div class="badge">Frontend development</div>
-							</div>
-
-							<p class="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-						</div>
-
-					</div>
-				</div>
-
-			</section>
-		</div>
-
-
-		<!-- Hire me -->
-		<div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-			<section class="w-full">
-				<h2 id="hire" class="secondary-title">Hire me</h2>
-				<p class="section-paragraph">Feel free to to contact me any time, through any method below.</p>
-
-				<div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
-					<div class="space-y-12">
-						<div>
-							<label class="text-white block mb-6 text-xl font-bold">Name</label>
-							<input class="w-full border border-input-border bg-input px-4 py-4">
-						</div>
-						<div>
-							<label class="text-white block mb-6 text-xl font-bold">Email</label>
-							<input type="email" class="w-full border border-input-border bg-input px-4 py-4">
-						</div>
-						<div>
-							<label class="text-white block mb-6 text-xl font-bold">Message</label>
-							<textarea type="email" class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"></textarea>
-						</div>
-						<button class="px-6 py-2 bg-theme text-white font-bold">Send it!</button>
-					</div>
-
-					<div class="mt-12">
-						<!-- Contact info -->
-						<p class="text-secondary">555-555-1234</p>
-						<a href="mailto:email@mydomain.com" class="text-secondary underline mt-3 block">email@mydomain.com</a>
-
-						<!-- Socials -->
-						<div class="flex mt-20 space-x-6">
-							<!-- Skype -->
-							<a href="#">
-								<svg class="w-8 h-8 lg:w-12 lg:h-12" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.1494 28.252C43.3496 27.1533 43.457 26.0303 43.457 24.9072C43.457 22.417 42.9688 20 42.0068 17.7295C41.0791 15.5322 39.7461 13.5596 38.0518 11.8652C36.3716 10.1808 34.3799 8.83914 32.1875 7.91504C29.9121 6.95313 27.5 6.46484 25.0098 6.46484C23.8379 6.46484 22.6611 6.57715 21.5186 6.79687C19.9376 5.9591 18.176 5.51995 16.3867 5.51758C13.4717 5.51758 10.7275 6.65527 8.66699 8.71582C7.65021 9.72738 6.84403 10.9305 6.29507 12.2555C5.74611 13.5806 5.46526 15.0013 5.46875 16.4355C5.46875 18.291 5.94727 20.1172 6.84082 21.7285C6.66016 22.7734 6.5625 23.8428 6.5625 24.9072C6.5625 27.3975 7.05078 29.8145 8.0127 32.085C8.94043 34.2822 10.2686 36.2549 11.9629 37.9492C13.6572 39.6436 15.6299 40.9717 17.8272 41.8994C20.1025 42.8613 22.5147 43.3496 25.0049 43.3496C26.0889 43.3496 27.1729 43.252 28.2373 43.0615C29.8731 43.9844 31.7188 44.4775 33.6084 44.4775C36.5234 44.4775 39.2676 43.3447 41.3281 41.2793C43.3936 39.2188 44.5264 36.4746 44.5264 33.5596C44.5313 31.7041 44.0527 29.873 43.1494 28.252ZM25.083 36.2061C18.5303 36.2061 15.6006 32.9834 15.6006 30.5713C15.6006 29.3311 16.5137 28.4668 17.7734 28.4668C20.5762 28.4668 19.8535 32.4951 25.083 32.4951C27.7637 32.4951 29.2432 31.04 29.2432 29.5508C29.2432 28.6572 28.8037 27.6611 27.0361 27.2266L21.2061 25.7715C16.5137 24.5947 15.6592 22.0557 15.6592 19.6729C15.6592 14.7217 20.3223 12.8613 24.7022 12.8613C28.7354 12.8613 33.4912 15.0928 33.4912 18.0615C33.4912 19.3359 32.3877 20.0732 31.1279 20.0732C28.7354 20.0732 29.1748 16.7627 24.3555 16.7627C21.9629 16.7627 20.6397 17.8467 20.6397 19.3945C20.6397 20.9424 22.5293 21.4355 24.1699 21.8115L28.4863 22.7686C33.2129 23.8232 34.4092 26.582 34.4092 29.1797C34.4092 33.1982 31.3184 36.2061 25.083 36.2061Z" fill="white"/></svg>
-							</a>
-							<!-- Twitter -->
-							<a href="#">
-								<svg class="w-8 h-8 lg:w-12 lg:h-12" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 0C9.40313 0 0 9.40313 0 21C0 32.5969 9.40313 42 21 42C32.5969 42 42 32.5969 42 21C42 9.40313 32.5969 0 21 0ZM31.0922 15.8297C31.1062 16.05 31.1062 16.2797 31.1062 16.5047C31.1062 23.3859 25.8656 31.3125 16.2891 31.3125C13.3359 31.3125 10.5984 30.4547 8.29219 28.9781C8.71406 29.025 9.11719 29.0437 9.54844 29.0437C11.9859 29.0437 14.2266 28.2188 16.0125 26.8219C13.725 26.775 11.8031 25.275 11.1469 23.2125C11.9484 23.3297 12.6703 23.3297 13.4953 23.1188C12.3175 22.8795 11.2588 22.2398 10.4991 21.3084C9.73949 20.377 9.32572 19.2113 9.32812 18.0094V17.9437C10.0172 18.3328 10.8281 18.5719 11.6766 18.6047C10.9633 18.1293 10.3784 17.4854 9.97365 16.7298C9.5689 15.9743 9.35683 15.1306 9.35625 14.2734C9.35625 13.3031 9.60938 12.4172 10.0641 11.6484C11.3714 13.2578 13.0028 14.5741 14.8522 15.5117C16.7016 16.4493 18.7275 16.9873 20.7984 17.0906C20.0625 13.5516 22.7063 10.6875 25.8844 10.6875C27.3844 10.6875 28.7344 11.3156 29.6859 12.3281C30.8625 12.1078 31.9875 11.6672 32.9906 11.0766C32.6016 12.2812 31.7859 13.2984 30.7031 13.9406C31.7531 13.8281 32.7656 13.5375 33.7031 13.1297C32.9953 14.1703 32.1094 15.0938 31.0922 15.8297Z" fill="white"/></svg>								
-							</a>
-						</div>
-					</div>
-					
-				</div>
-
-			</section>
-		</div>
-
-        <script src="main.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>
