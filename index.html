@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="tailwind.css">
+	<link rel="stylesheet" href="tailwind.css">
+	<link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="text-gray-600 dark:text-white pb-12 bg-white dark:bg-black">
+<body class="text-gray-600 dark:text-white bg-white dark:bg-black">
     <div class="relative flex h-full min-h-screen w-full">
     	<nav
     		class="absolute -translate-x-full 3xl:w-80 z-30 flex h-full max-h-screen min-h-screen w-3/4 flex-none transform flex-col overflow-y-auto border-r border-gray-150 bg-white pb-10 transition duration-200 ease-in-out dark:border-gray-800 dark:bg-gray-900 sm:w-1/2 sm:pb-0 md:w-1/3 lg:relative lg:z-auto lg:w-56 lg:translate-x-0 lg:bg-gray-50 lg:dark:bg-gray-900 2xl:w-72">
@@ -26,7 +27,7 @@
     							<line x1="3" y1="6" x2="21" y2="6"></line>
     							<line x1="3" y1="18" x2="21" y2="18"></line>
     						</svg></span>
-    					<h2 class="text-primary transform-gpu text-sm font-bold line-clamp-1">Jens Johnstons</h2>
+    					<h2 class="text-primary transform-gpu text-sm font-bold line-clamp-1">Jens Johnston</h2>
     				</span></div>
     			<div></div>
     		</div>
@@ -34,13 +35,9 @@
     			<ul class="space-y-1">
     				<li class="flex items-stretch space-x-1"><a
     						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  bg-black text-white hover:bg-black hover:text-white dark:bg-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
-    						href="/"><span class="flex items-center justify-center w-4"><svg
-    								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"
-    								fill="currentColor">
-    								<path
-    									d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
-    								</path>
-    							</svg></span><span class="flex-1">Home</span></a></li>
+    						href="/"><span class="flex items-center justify-center w-4">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M218.8,103.7,138.8,31a16,16,0,0,0-21.6,0l-80,72.7A16,16,0,0,0,32,115.5v92.1a16.4,16.4,0,0,0,4,11A15.9,15.9,0,0,0,48,224H96a8,8,0,0,0,8-8V168a8,8,0,0,1,8-8h32a8,8,0,0,1,8,8v48a8,8,0,0,0,8,8h48a15.6,15.6,0,0,0,7.6-1.9A16.1,16.1,0,0,0,224,208V115.5A16,16,0,0,0,218.8,103.7Z"></path></svg>
+							</span><span class="flex-1">Home</span></a></li>
     				<li class="flex items-stretch space-x-1"><a
     						class="flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-gray-700 sm:dark:hover:text-gray-200"
     						href="/writing"><span class="flex items-center justify-center w-4"><svg
@@ -272,62 +269,75 @@
     	</div>
     	<div class="flex flex-1">
     		<div class="flex w-full">
-    			<div id="main" class="relative flex max-h-screen w-full flex-col overflow-y-auto bg-white dark:bg-black"
-    				data-cy="home-intro">
-    				<div class="filter-blur sticky top-0 z-10 flex flex-col justify-center px-3 py-2 dark:border-b dark:border-gray-900"
-    					style="background: rgba(255, 255, 255, 0); box-shadow: rgba(0, 0, 0, 0) 0px 1px 3px; min-height: 48px;">
-    					<div class="flex flex-none items-center justify-between"><span
-    							class="flex items-center space-x-3"><span
-    								class="flex cursor-pointer items-center justify-center rounded-md p-2 hover:bg-gray-200 dark:hover:bg-gray-800 lg:hidden"><svg
-    									xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-    									fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    									stroke-linejoin="round" class="text-primary">
-    									<line x1="3" y1="12" x2="21" y2="12"></line>
-    									<line x1="3" y1="6" x2="21" y2="6"></line>
-    									<line x1="3" y1="18" x2="21" y2="18"></line>
-    								</svg></span>
-    							<h2 class="text-primary transform-gpu text-sm font-bold line-clamp-1"
-    								style="transform: translateY(200%); opacity: 0;">Home</h2>
-    						</span></div>
-    					<div></div>
-    				</div>
-    				<div class="p-4"></div>
-    				<div class="mx-auto w-full max-w-3xl px-4 py-12 pb-10 md:px-8">
-						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
-								<div class="md:col-start-3 md:col-end-13 py-10 px-6 border border-gray-200 text-center rounded-2xl xl:px-10 xl:text-left mb-10"><a href="/" class="flex items-center no-underline">
-									<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGQSsMmnQSp3Q/profile-displayphoto-shrink_400_400/0/1650279402881?e=1655942400&v=beta&t=8FaYnk3ul_5RzgE_Ur8R4yDnuXwEok2i5HoK4LGmI58" alt="" class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"></a>
-									<div class="space-y-2 xl:flex xl:items-center xl:justify-between mt-10">
-										<div class="font-medium text-lg leading-6 space-y-1">
-											<h3 class="">Jens Johnston</h3>
-											<p class="">Product Owner</p>
-										</div>
-	
-										<ul role="list" class="flex justify-center space-x-5">
-											<li>
-												<a href="#" class="text-gray-400 hover:text-gray-300">
-													<span class="sr-only">Twitter</span>
-													<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-														<path
-															d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">
-														</path>
-													</svg>
-												</a>
-											</li>
-											<li>
-												<a href="#" class="text-gray-400 hover:text-gray-300">
-													<span class="sr-only">LinkedIn</span>
-													<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-														<path fill-rule="evenodd"
-															d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-															clip-rule="evenodd"></path>
-													</svg>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								
+    			<div id="main" class="relative flex max-h-screen w-full flex-col overflow-y-auto bg-white dark:bg-black" data-cy="home-intro">
+					<div class="relative">
+						<!-- Background image and overlap -->
+						<div aria-hidden="true" class="hidden absolute inset-0 sm:flex sm:flex-col">
+						  <div class="flex-1 relative w-full">
+							<div class="absolute inset-0 overflow-hidden">
+							  <img src="https://www.apple.com/v/iphone-13-pro/f/images/overview/manifesto/wallpaper_startframe__crc5hsgtpzo2_large.jpg" class="w-full h-full object-center object-cover">
+							</div>
+							<div class="absolute inset-0"></div>
+						  </div>
+						  <div class="w-full bg-white h-32 md:h-40 lg:h-48"></div>
 						</div>
+				
+						<div class="relative max-w-3xl mx-auto pb-96 px-4 text-center sm:pb-0 sm:px-6 lg:px-8">
+						  <!-- Background image and overlap -->
+						  <div aria-hidden="true" class="absolute inset-0 flex flex-col sm:hidden">
+							<div class="flex-1 relative w-full bg-gray-800">
+							  <div class="absolute inset-0 overflow-hidden">
+								<img src="https://tailwindui.com/img/ecommerce-images/home-page-04-hero-full-width.jpg" alt="" class="w-full h-full object-center object-cover">
+							  </div>
+							  <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+							</div>
+							<div class="w-full bg-white h-48"></div>
+						  </div>
+						  <div class="relative py-16">
+
+						  </div>
+						</div>
+				
+						<section aria-labelledby="collection-heading" class="-mt-96 relative sm:mt-0 mx-auto w-full max-w-3xl px-4 py-12 pb-10 md:px-8">
+						  <h2 id="collection-heading" class="sr-only">Collections</h2>
+						  <div class="max-w-md mx-auto grid grid-cols-1 gap-y-6 px-4 sm:max-w-7xl sm:px-0 sm:grid-cols-12 sm:gap-y-0 sm:gap-x-6 lg:px-0 lg:gap-x-8 h-96">
+							<div class="md:col-start-3 md:col-end-13 py-10 px-6 text-center rounded-2xl xl:px-10 xl:text-left bg-gray-100 bg-opacity-50 backdrop-filter-new"><a href="/" class="flex items-center no-underline">
+								<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGQSsMmnQSp3Q/profile-displayphoto-shrink_400_400/0/1650279402881?e=1655942400&v=beta&t=8FaYnk3ul_5RzgE_Ur8R4yDnuXwEok2i5HoK4LGmI58" alt="" class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"></a>
+								<div class="space-y-2 xl:flex xl:items-center xl:justify-between mt-10">
+									<div class="font-medium text-lg leading-6 space-y-1">
+										<h3 class="">Jens Johnston</h3>
+										<p class="">Product Owner</p>
+									</div>
+
+									<ul role="list" class="flex justify-center space-x-5">
+										<li>
+											<a href="#" class="text-gray-400 hover:text-gray-300">
+												<span class="sr-only">Twitter</span>
+												<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+													<path
+														d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">
+													</path>
+												</svg>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="text-gray-400 hover:text-gray-300">
+												<span class="sr-only">LinkedIn</span>
+												<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+													<path fill-rule="evenodd"
+														d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+														clip-rule="evenodd"></path>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+						  </div>
+						</section>
+					  </div>
+    				<div class="mx-auto w-full max-w-3xl px-4 py-12 pb-10 md:pt-3 md:px-8">
     					<div class="pb-24 space-y-8 md:space-y-16">
     						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
     							<h4
