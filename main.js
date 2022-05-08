@@ -1,14 +1,20 @@
-function updateList() {
-	const titles = [...document.querySelectorAll('h1, h2')].sort((a, b) => {
-		return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
-	});
+const toggleTag = document.querySelector(".burger")
+const mainTag = document.querySelector("nav")
 
-	document.querySelectorAll(".selected-circle").forEach(c => c.classList.remove("selected-circle"));
-	
-	document.querySelectorAll(".nav-dot")[[...document.querySelectorAll('h1, h2')].indexOf(titles[0])].classList.add("selected-circle");
-}
+console.log("dw")
 
-updateList();
-window.addEventListener('scroll', () => {
-    updateList();
+toggleTag.addEventListener("click", function (event) {
+  
+	console.log("hello")
+
+  mainTag.classList.toggle("-translate-x-full")
+
+
+  if (mainTag.classList.contains("-translate-x-full")) {
+		toggleTag.innerHTML = `<img src="close.svg">`
+  } else {
+    toggleTag.innerHTML = `<img src="menu.svg"> Menu`
+  }
+  
+  event.preventDefault()
 })
