@@ -11,9 +11,9 @@ toggleTag.addEventListener("click", function (event) {
 
 
   if (mainTag.classList.contains("-translate-x-full")) {
-		toggleTag.innerHTML = `<img src="close.svg">`
+		toggleTag.innerHTML = `<img src="burger.svg">`
   } else {
-    toggleTag.innerHTML = `<img src="menu.svg"> Menu`
+    toggleTag.innerHTML = `<img src="close.svg">`
   }
   
   event.preventDefault()
