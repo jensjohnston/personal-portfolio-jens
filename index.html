@@ -96,10 +96,10 @@
     			<div id="main" class="relative flex max-h-screen w-full flex-col overflow-y-auto bg-gray-50 dark:bg-black" data-cy="home-intro">
 					<div class="relative">
 						<!-- Background image and overlap -->
-						<div aria-hidden="true" class="hidden absolute inset-0 sm:flex sm:flex-col">
+						<div aria-hidden="true" class=" absolute inset-0 sm:flex sm:flex-col">
 						  <div class="flex-1 relative w-full">
-							<div class="absolute inset-0 w-full flex items-center justify-end w-full">
-								<svg class="blob" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6in" height="6in" >
+							<div class="inset-0 w-full flex items-center justify-end w-full">
+								<svg class="blob fixed" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6in" height="6in" >
 									<defs>
 										<radialGradient id="center" spreadMethod="pad" gradientUnits="userSpaceOnUse" r="50%">
 											<stop stop-color="rgb(72, 69, 66)" offset="0"/>
@@ -138,13 +138,6 @@
 						<div class="relative max-w-3xl mx-auto pb-96 px-4 text-center sm:pb-0 sm:px-6 lg:px-8">
 						  <!-- Background image and overlap -->
 						  <div aria-hidden="true" class="absolute inset-0 flex flex-col sm:hidden">
-							<div class="flex-1 relative w-full bg-gray-800">
-							  <div class="absolute inset-0 overflow-hidden">
-								<img src="https://www.apple.com/v/iphone-13-pro/f/images/overview/manifesto/wallpaper_startframe__crc5hsgtpzo2_large.jpg" alt="" class="w-full h-full object-center object-cover">
-							  </div>
-							  <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
-							</div>
-							<div class="w-full bg-white h-48"></div>
 						  </div>
 						  <div class="relative py-16">
 
@@ -182,21 +175,21 @@
 						  </div>
 						</section>
 					  </div>
-    				<div class="mx-auto w-full max-w-3xl px-4 pt-0 py-12 pb-10 md:pt-3 md:px-8">
+    				<div class="mx-auto w-full max-w-3xl pt-0 py-12 pb-10 md:pt-3 md:px-8 px-4 bg-gray-50 md:bg-transparent">
     					<div class="pb-24 space-y-8 md:space-y-16">
     						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
     							<h4
     								class="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40">
     							</h4>
     							<div class="col-span-10" id="about-me">
-    								<div class="prose text-primary">
+    								<div class="prose text-primary z-40 md:bg-gray-50 md:bg-opacity-50 backdrop-filter-new rounded-2xl md:p-8">
     									<p class="pb-4">Hey, I'm Jens. I work with integrating the domain knowledge, user experience, business goals and strategy of Airinum's E-commerce. I’m responsible and working in the development team together with the sales and marketing to get the product aligned with return on investment and own the product backlog and prioritize and orders stories to create the most value.</p>
     									<p class="pb-4">I'm a creative, detail-oriented individual with a knack for big ideas and solving problems.</p>
     									<p class="">I enjoy working on a team and is always eager to share and receive valuable input.</p>
     								</div>
     							</div>
     						</div>
-    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
+    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12 bg-gray-50 bg-opacity-50 backdrop-filter-new rounded-2xl md:p-8">
     							<h4
     								class="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40">
     								Online</h4>
@@ -228,7 +221,7 @@
 											</div>
     							</div>
     						</div>
-    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12">
+    						<div class="grid items-start grid-cols-1 gap-6 md:grid-cols-12 md:bg-gray-50 md:bg-opacity-50 backdrop-filter-new md:rounded-2xl md:pl-8">
     							<h4
     								class="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40">
     								Where</h4>

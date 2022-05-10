@@ -63,11 +63,11 @@ svg.blob{
 }
 
 #goo1{
-	animation: rotate 24s ease infinite alternate;
+	animation: rotate 14s ease infinite alternate;
 }
 
 #goo2{
-	animation: rotate 24s ease infinite alternate-reverse;
+	animation: rotate 14s ease infinite alternate-reverse;
 }
 
 @keyframes rotate{
