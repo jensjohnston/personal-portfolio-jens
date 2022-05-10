@@ -43,27 +43,39 @@ html, body {
 scroll-margin-top: 100px;
 }
 
-.left-percentage {
-    left: 5%;
-}
 
-.h-screen-partial {
-    height: 80vh;
-}
 
-.nav-dot {
-    transition: background 200ms, border-color 200ms;
-}
 
-.selected-circle {
-    @apply border-theme bg-theme;
-}
-
-.nav-dot:hover span {
-    opacity: 1;
-}
 
 .backdrop-filter-new {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
+}
+
+svg.blob{
+	display: inline-block;
+    filter: blur(50px);
+    border-radius: 100%;
+}
+
+#goo1, #goo2{
+	transform-origin: top;
+}
+
+#goo1{
+	animation: rotate 24s ease infinite alternate;
+}
+
+#goo2{
+	animation: rotate 24s ease infinite alternate-reverse;
+}
+
+@keyframes rotate{
+	0%{
+		transform: rotate(20deg)
+	}
+	
+	50%{
+		transform: rotate(60deg) scale(.5)
+	}
 }
