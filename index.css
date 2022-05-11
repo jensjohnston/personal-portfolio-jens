@@ -58,24 +58,22 @@ svg.blob{
     border-radius: 100%;
 }
 
-#goo1, #goo2{
-	transform-origin: top;
-}
+
 
 #goo1{
-	animation: rotate 14s ease infinite alternate;
+	animation: rotate 24s ease infinite alternate;
 }
 
 #goo2{
-	animation: rotate 14s ease infinite alternate-reverse;
+	animation: rotate 24s ease infinite alternate-reverse;
 }
 
 @keyframes rotate{
 	0%{
-		transform: rotate(20deg)
+        transform: rotate(20deg)
 	}
 	
 	50%{
-		transform: rotate(60deg) scale(.5)
+        transform: rotate(60deg) 
 	}
 }
