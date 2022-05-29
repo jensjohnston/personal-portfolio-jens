@@ -6,7 +6,8 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "tailwindcss build src/styles.css -o public/styles.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
