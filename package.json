@@ -5,5 +5,11 @@
   "main": "tailwind.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+
+
+  "scripts": {
+    "build": "tailwind build src/css/tailwind.css -o dist/css/tailwind.css"
+  }
 }
+
